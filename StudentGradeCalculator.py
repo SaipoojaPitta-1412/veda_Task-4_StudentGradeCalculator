@@ -1,5 +1,5 @@
 def get_valid_mark(subject_name):
-    """Prompts the user for a mark and validates that it is between 0 and 100."""
+   
     while True:
         try:
             mark = float(input(f"Enter marks for {subject_name} (0-100): "))
@@ -11,7 +11,7 @@ def get_valid_mark(subject_name):
 
 
 def calculate_grade(percentage):
-    """Returns the letter grade based on the total percentage."""
+    
     if percentage >= 90:
         return "A+"
     elif percentage >= 80:
@@ -31,20 +31,20 @@ def main():
     print("       STUDENT GRADE CALCULATOR         ")
     print("========================================\n")
 
-    # 1. Input Section
+   
     subjects = ["Math", "Science", "English"]
     marks = {}
 
     for subject in subjects:
         marks[subject] = get_valid_mark(subject)
 
-    # 2. Calculation Section
+   
     total_marks = sum(marks.values())
     max_marks = len(subjects) * 100
     percentage = (total_marks / max_marks) * 100
     grade = calculate_grade(percentage)
 
-    # 3. Output Section
+    
     print("\n========================================")
     print("            SUMMARY REPORT              ")
     print("========================================")
